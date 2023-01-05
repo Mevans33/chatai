@@ -101,7 +101,7 @@ const handleSubmit = async (e) => {
   });
 
   clearInterval(loadInterval);
-  messageDivDiv.innerHTML = "";
+  messageDiv.innerHTML = "";
 
   if (response.ok) {
     // acutal response from backend
