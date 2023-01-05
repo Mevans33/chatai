@@ -6,6 +6,8 @@ import { Configuration, OpenAIApi } from "openai";
 // to use env variables
 dotenv.config();
 
+console.log(process.env.OPENAI_API_KEY);
+
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -43,8 +45,6 @@ app.post("/", async (req, res) => {
       frequency_penalty: 0.5,
       presence_penalty: 0,
     });
-
-    console.log(res);
 
     // res send back to frontend
     res.status(200).send({
