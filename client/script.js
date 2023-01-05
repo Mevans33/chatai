@@ -100,6 +100,8 @@ const handleSubmit = async (e) => {
     }),
   });
 
+  console.log(response);
+
   clearInterval(loadInterval);
   messageDiv.innerHTML = "";
 
